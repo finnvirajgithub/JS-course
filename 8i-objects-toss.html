@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>toss</title>
+</head>
+<body>
+
+  <button onclick="
+    playgame('heads');
+  ">heads</button>
+
+  <button onclick="
+    playgame('tails');
+  ">tails</button>
+
+  <script>
+
+    function playgame(playermove){
+      const randomNum = Math.random();
+      let result = randomNum<0.5 ? 'heads' : 'tails';
+
+      let output = (playermove === result) ? 'You win!' : 'You lose!';
+
+      console.log(output);
+    }
+    
+  </script>
+</body>
+</html>

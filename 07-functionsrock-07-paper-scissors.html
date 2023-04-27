@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+</head>
+<body>
+  <p>Rock Paper Scissors</p>
+
+  <button onclick="
+    playGame('Rock');
+  ">Rock</button>
+
+  <button onclick="
+    playGame('Paper');
+  ">Paper</button>
+
+  <button onclick="
+    playGame('Scissors');
+  ">Scissors</button>
+
+  <script>
+    function playGame(playerMove){
+      const move = pickComputerMove();
+
+      let result = '';
+
+      if (playerMove === 'Scissors'){
+        if (move === 'Rock'){
+          result = 'You Lost';
+        }else if (move === 'Paper') {
+          result = 'You Win';
+        }else {
+          result = 'Tie';
+        }
+      }else if (playerMove === 'Paper'){
+          if (move === 'Rock'){
+            result = 'You Win';
+          }else if (move === 'Paper') {
+            result = 'Tie';
+          }else {
+            result = 'You Lost';
+          }
+      }else if (playerMove === 'Rock') {
+        if (move === 'Rock'){
+          result = 'Tie';
+        }else if (move === 'Paper') {
+          result = 'You Lost';
+        }else {
+          result = 'You Win';
+        }
+      }
+      alert(`You picked ${playerMove}. Computer picked ${move}. ${result}.`);
+    }
+    
+    function pickComputerMove(){
+      const randomNum = Math.random();
+      let move = '';
+      if (randomNum >=0 && randomNum < (1/3)){
+        move = 'Rock';
+      }else if (randomNum >=(1/3) && randomNum < (2/3)){
+        move = 'Paper';
+      }else {
+        move = 'Scissor';
+      }
+
+      console.log(move);
+
+      return move;
+    }
+
+  
+  </script>
+</body>
+</html>
