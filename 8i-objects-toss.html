@@ -17,6 +17,10 @@
   ">tails</button>
 
   <script>
+    let score = JSON.parse(localStorage.getItem('score')) || {
+      win: 0,
+      loss: 0
+    }
 
     function playgame(playermove){
       const randomNum = Math.random();
@@ -25,6 +29,16 @@
       let output = (playermove === result) ? 'You win!' : 'You lose!';
 
       console.log(output);
+
+      if (output === 'You win!'){
+        score.win++;
+      }else if (output === 'You lose!'){
+        score.loss++;
+      }
+
+      localStorage.setItem('score',JSON.stringify(score));
+
+      console.log(`Wins: ${score.win} losses: ${score.loss}`);
     }
     
   </script>
