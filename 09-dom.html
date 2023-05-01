@@ -8,8 +8,15 @@
 </head>
 <body>
   <button>Hello</button>
+  <button class="js-button">second button</button>
 
   <script>
+    console.log(document.querySelector('button').innerHTML); // html in js code
+
+    const buttonElement = document.querySelector('.js-button').innerHTML;
+
+    console.log(buttonElement);
+
     console.log(document.title); //title show in console
 
     console.log(document.body); //show body in console
@@ -18,7 +25,7 @@
 
     console.log(document.body.innerHTML); //show html code inside the body
 
-    document.body.innerHTML = '<button>Submit</button>'; //control the body
+    /*document.body.innerHTML = '<button>Submit</button>'; //control the body*/
 
 
     /*document.body.innerHTML = 'hello!';
