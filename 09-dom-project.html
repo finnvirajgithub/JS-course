@@ -10,17 +10,59 @@
 
   <p>YouTube subscribe Button</p>
   <button onclick="
-    const btnElement = document.querySelector('.js-subscribe-btn');
+    subscribe();
+  " class="js-subscribe-btn">Subscribe</button> <br><br><br>
 
-    if (btnElement.innerHTML === 'Subscribe') {
-      btnElement.innerHTML = 'Subscribed';
-    } else {
-      btnElement.innerHTML = 'Subscribe';
-    }
-  " class="js-subscribe-btn">Subscribe</button>
+  <p>Rock Paper Scissor</p>
+
+  <a href="http://127.0.0.1:5500/09-rock-paper-scissor.html">Click here</a><br><br><br>
+
+  <p> Amazon Shipping Calculater</p>
+
+  <p>Orders under $40 - +$10 shipping.</p>
+
+  <p>Orders over $40 - FREE shipping.</p>
+
+  <input type="text" name="price" placeholder="Cost of order" class="js-cost-input" onkeydown="handleKeydown();
+    
+  ">
+
+  <button onclick="
+    calculateTotal();
+  " class="calculate">Calculate</button>
+
+  <p class="js-total-cost"></p>
 
   <script>
 
+    //Enter key
+    
+    function handleKeydown(){
+      if (event.key === 'Enter'){
+        calculateTotal();
+      }
+    }
+
+    function calculateTotal(){
+      const inputElement = document.querySelector('.js-cost-input');
+      let cost = Number(inputElement.value);
+
+      if (cost < 40){
+        cost+=10;
+      }
+      
+      document.querySelector('.js-total-cost').innerHTML = `$${cost}`;
+    }
+
+    function subscribe(){
+      const btnElement = document.querySelector('.js-subscribe-btn');
+
+      if (btnElement.innerText === 'Subscribe') {
+        btnElement.innerHTML = 'Subscribed';
+      } else {
+        btnElement.innerHTML = 'Subscribe';
+      }
+    }
   </script>
 </body>
 </html>
