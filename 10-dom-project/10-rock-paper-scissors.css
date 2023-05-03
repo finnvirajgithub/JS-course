@@ -1,0 +1,79 @@
+/* dom project CSS*/
+
+body {
+  font-family: arial;
+}
+
+.js-subscribe-btn {
+  border: none;
+  background-color: black;
+  color: white;
+  padding: 10px 15px;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.is-subscribed {
+  background-color: rgb(240, 240, 240);
+  color: black;
+}
+
+.cost-input {
+  font-size: 15px;
+  padding: 10px;
+}
+
+.calculate {
+  padding: 12px;
+  background-color: green;
+  color: white;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* rock paper scissor CSS */
+
+body {
+  background-color: rgb(25, 25, 25);
+  color: white;
+  font-family: arial;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.move-icon {
+  height: 50px;
+}
+
+.move-btn {
+  background-color: transparent;
+  border: 3px solid white;
+  border-radius: 90px;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.result {
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+.score {
+  margin-top: 50px;
+}
+
+.reset-btn {
+  background-color: white;
+  border: none;
+  padding: 10px;
+  font-size: 15px;
+  cursor: pointer;
+}

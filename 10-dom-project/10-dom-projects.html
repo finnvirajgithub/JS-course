@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM projects</title>
+  <link rel="stylesheet" href="/10-dom-project/10-rock-paper-scissors.css">
+</head>
+<body>
+
+  <p>YouTube subscribe Button</p>
+  <button onclick="
+    subscribe();
+  " class="js-subscribe-btn">Subscribe</button> <br><br><br>
+
+  <p>Rock Paper Scissor</p>
+
+  <a href="http://127.0.0.1:5500/09-rock-paper-scissor.html">Click here</a><br><br><br>
+
+  <p> Amazon Shipping Calculater</p>
+
+  <p>Orders under $40 - +$10 shipping.</p>
+
+  <p>Orders over $40 - FREE shipping.</p>
+
+  <input type="text" name="price" placeholder="Cost of order" class="js-cost-input cost-input" onkeydown="handleKeydown(event);
+    
+  ">
+
+  <button onclick="
+    calculateTotal();
+  " class="calculate">Calculate</button>
+
+  <p class="js-total-cost"></p>
+
+  <script src="/10-rock-paper-scissors.js"></script>
+</body>
+</html>
