@@ -23,7 +23,7 @@
 
   <p>Orders over $40 - FREE shipping.</p>
 
-  <input type="text" name="price" placeholder="Cost of order" class="js-cost-input" onkeydown="handleKeydown();
+  <input type="text" name="price" placeholder="Cost of order" class="js-cost-input" onkeydown="handleKeydown(event);
     
   ">
 
@@ -35,9 +35,15 @@
 
   <script>
 
+    //window object
+
+    /*window.document;
+    window.console.log();
+    window.alert*/
+
     //Enter key
-    
-    function handleKeydown(){
+
+    function handleKeydown(event){
       if (event.key === 'Enter'){
         calculateTotal();
       }

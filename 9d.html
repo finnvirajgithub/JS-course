@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM exercise 3</title>
+</head>
+<body>
+  <input type="text" placeholder="Name" class="js-input" onkeydown="handleKey(event)">
+
+  <button class="submit" onclick="
+    displayName();
+  ">Submit</button>
+
+  <p class="js-output"></p>
+
+  <script>
+    function handleKey(event){
+      if (event.key === "Enter"){
+        displayName();
+      }
+    }
+
+    function displayName(){
+      const inputElement = document.querySelector('.js-input');
+
+      let input = inputElement.value;
+
+      document.querySelector('.js-output').innerHTML = `Your name is: ${input}`;
+    }
+  </script>
+</body>
+</html>
