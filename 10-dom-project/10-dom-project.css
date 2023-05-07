@@ -1,0 +1,38 @@
+/* dom project CSS*/
+
+body {
+  font-family: arial;
+}
+
+.js-subscribe-btn {
+  border: none;
+  background-color: black;
+  color: white;
+  padding: 10px 15px;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.is-subscribed {
+  background-color: rgb(240, 240, 240);
+  color: black;
+}
+
+.cost-input {
+  font-size: 15px;
+  padding: 10px;
+}
+
+.calculate {
+  padding: 12px;
+  background-color: green;
+  color: white;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+}

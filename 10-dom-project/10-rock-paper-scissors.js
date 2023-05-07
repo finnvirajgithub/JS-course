@@ -1,34 +1,5 @@
-// dom project JS
 
-function handleKeydown(event){
-  if (event.key === 'Enter'){
-    calculateTotal();
-  }
-}
-
-function calculateTotal(){
-  const inputElement = document.querySelector('.js-cost-input');
-  let cost = Number(inputElement.value);
-
-  if (cost < 40){
-    cost+=10;
-  }
-  
-  document.querySelector('.js-total-cost').innerHTML = `$${cost}`;
-}
-
-function subscribe(){
-  const btnElement = document.querySelector('.js-subscribe-btn');
-
-  if (btnElement.innerText === 'Subscribe') {
-    btnElement.innerHTML = 'Subscribed';
-    btnElement.classList.add('is-subscribed');  // create class
-  } else {
-    btnElement.innerHTML = 'Subscribe';
-    btnElement.classList.remove('is-subscribed');  //remove class
-  }
-}
-
+// Rock paper scissors JS
 let score = JSON.parse(localStorage.getItem('score')) || {
   wins: 0,
   losses: 0,
@@ -39,7 +10,7 @@ let score = JSON.parse(localStorage.getItem('score')) || {
 
 updateScoreElement();
 
-// Rock paper scissors JS
+
 
 function playGame(playerMove){
 const move = pickComputerMove();
