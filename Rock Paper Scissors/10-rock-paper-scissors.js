@@ -61,8 +61,8 @@ const move = pickComputerMove();
 
   document.querySelector('.js-result').innerHTML = result;
 
-  document.querySelector('.js-move').innerHTML = `You <img src="/10-dom-project/images/${playerMove}-emoji.png" alt="" class="move-icon">
-  <img src="/10-dom-project/images/${move}-emoji.png" alt="" class="move-icon"> Computer`;
+  document.querySelector('.js-move').innerHTML = `You <img src="/Rock Paper Scissors/images/${playerMove}-emoji.png" alt="" class="move-icon">
+  <img src="/Rock Paper Scissors/images/${move}-emoji.png" alt="" class="move-icon"> Computer`;
 
   }
 
