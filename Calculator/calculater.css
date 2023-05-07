@@ -1,0 +1,41 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.view {
+  font-size: 40px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 20px;
+  border: none;
+  border-radius: 50px;
+  margin: 4px 2px 5px 4px;
+  height: 50px;
+  background-color: #505050;
+  color: #D4D4D2;
+}
+
+.clear {
+  font-size: 15px;
+  padding: 15px 8px;
+}
+
+.minaze {
+  width: 50px;
+}
+
+.dot {
+  width: 50px;
+}
+
+.mod {
+  width: 50px;
+}
+
+.yellow {
+  background-color: #FF9500;
+}
