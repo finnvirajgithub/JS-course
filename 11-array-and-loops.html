@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrays and loops</title>
+</head>
+<body>
+  <script>
+    const myArray = [10, 20, 30];
+    console.log(myArray);
+
+    console.log(myArray[0]);
+
+    myArray[0] = 80;
+
+    console.log(myArray);
+
+    [1, 'helloworld', true, {name: 'tommy'}, [1,2]];
+
+    console.log(Array.isArray([1,2]));
+
+    console.log(myArray.length);
+
+    //add value to the array
+
+    myArray.push(50);
+    console.log(myArray);
+
+    // remove values from array
+
+    myArray.splice(0, 1);
+    console.log(myArray);
+
+    //loops
+    //while loop
+
+    let i = 1;
+
+    while (i<10) {
+      console.log(i);
+      i++;
+    }
+
+    //for loop
+
+    for (let i = 1; i < 10; i++){
+      console.log(i);
+    }
+
+    //genarate random number until 0.5
+
+    let randomNumber = 0;
+
+    while (randomNumber < 0.5){
+      randomNumber = Math.random();
+    }
+
+    console.log(randomNumber);
+
+    // access array elements through loop
+
+    const todoList = [
+      'make dinner',
+      'wash dishes',
+      'watch movies'
+    ];
+
+    for (let index = 0; index <=2; index++){
+      console.log(todoList[index]);
+
+    }
+
+    //Accumilater pattern
+
+    const nums = [1,1,3];
+    let total = 0;
+
+    for (let i = 0; i<nums.length;i++) {
+      total = total + nums[i];
+    }
+
+    console.log(total);
+
+    //double the numbers
+
+    const doubledNumbers = [];
+
+    for (let i = 0; i < nums.length; i++) {
+      const num = nums[i];
+      doubledNumbers.push(num*2);
+    }
+
+    console.log(doubledNumbers);
+
+  </script>
+</body>
+</html>
