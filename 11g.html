@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    // icrease by 1 each element
+
+    let array = [1,2,3];
+
+    for (let i = 0; i <= array.length-1; i++){
+      array[i]= array[i]+1;
+    }
+
+    console.log(array);
+
+    // increase by given number
+
+    let num = 2;
+
+    addNum(array,num);
+
+    function addNum(array,num){
+      for (let i = 0; i <= array.length-1; i++){
+        array[i]=array[i]+num;
+      }
+
+      console.log(array);
+    }
+
+    // add two arays
+
+    const array1 = [1,2,3];
+    const array2 = [2,4,6];
+
+    addarrays(array1,array2);
+
+    function addarrays(array1,array2){
+      for (let i = 0; i <= array1.length-1; i++){
+        array1[i]+=array2[i];
+      }
+
+      console.log(array1);
+    }
+
+    //count positive numbers
+
+    const array3 = [-2,3,-5,7,10];
+
+    countPositive(array3);
+
+    function countPositive(array){
+      let x = 0;
+      for (let i = 0; i < array.length; i++){
+        if (array[i]>0){
+          x++;
+        }
+      }
+
+      console.log(x);
+    }
+
+    //get min and max values
+
+    //minMax(array);
+
+    minMax([]);
+
+    function minMax (array){
+      const output = {
+        min: array[0],
+        max: array[0]
+      }
+
+      for (let i = 0; i < array.length; i++){
+        let value = array[i];
+
+        if (value < output.min){
+          output.min = value;
+        }
+
+        if (value > output.max){
+          output.max = value;
+        }
+      }
+      console.log(`Max: ${output.max}`);
+      console.log(`Min: ${output.min}`);
+    }
+
+    // count words
+
+    const array4 = ['apple','orange','orange','orange','apple'];
+
+    countWords(array4);
+
+    function countWords(array){
+      let result = {};
+
+      for (let i = 0; i < array.length; i++){
+        let word = array[i];
+
+        if (result[word]){
+          result[word]++;
+        }else {
+          result[word] = 1;
+        }
+      }
+
+      console.log(result);
+    }
+  </script>
+</body>
+</html>
