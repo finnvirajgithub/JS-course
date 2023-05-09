@@ -1,5 +1,20 @@
 const todoList = [];
 
+renderTodo();
+
+function renderTodo(){
+  let todoListHTML ='';
+
+  for (let i = 0; i < todoList.length; i++) {
+    const todo = todoList[i];
+    const html = `<p>${todo}</p>`; //generating html using js
+    todoListHTML+=html;
+  }
+  
+  document.querySelector('.js-output').innerHTML = todoListHTML;
+}
+
+
 function addTodo(){
   const inputElement = document.querySelector('.js-name-input');
 
@@ -11,4 +26,6 @@ function addTodo(){
   //reset textbox
 
   inputElement.value ='';
+
+  renderTodo();
 }
