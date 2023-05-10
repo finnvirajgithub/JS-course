@@ -1,0 +1,41 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.output-grid,
+.input-grid {
+  display: grid;
+  grid-template-columns: 200px 150px 100px;
+  column-gap: 10px;
+  row-gap: 10px;
+  align-items: center;
+}
+
+.input-grid {
+  margin-bottom: 10px;
+}
+
+.name, .date {
+  font-size: 15px;
+  padding: 6px;
+}
+
+.btn-add {
+  border: none;
+  background-color: green;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.btn-dlt {
+  border: none;
+  background-color: darkred;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 10px;
+}
+

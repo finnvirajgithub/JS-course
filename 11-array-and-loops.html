@@ -94,6 +94,24 @@
 
     console.log(doubledNumbers);
 
+    //Arrays contains only refferences
+
+    const array5 = [1,2,3];
+    const array6 = array5;
+    array6.push(4);
+    console.log(array5);
+    console.log(array6);  // both arrays are changed
+
+    const array7 = array5.slice();  //only value copied
+    array7.push(5);
+    console.log(array5);
+    console.log(array7); 
+
+    //get first value and second value
+
+    const [firstValue, secondValue] = [1,2,3];
+    console.log(firstValue);
+
   </script>
 </body>
 </html>
