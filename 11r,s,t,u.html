@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    // remove 'egg' from the array
+
+    function removeEgg(array){
+      const array1 = [];
+      for (let i = 0; i<array.length; i++) {
+        if (array[i] === 'egg') {
+          continue;
+        }else {
+          array1.push(array[i]);
+        }
+      }
+      console.log(array1);
+    }
+
+    removeEgg(['egg','apple','egg','egg','ham']);
+
+    //remove only first 2 'eggs' s.
+
+    function removeEgg1(array){
+      let x = 0;
+      const array1 = [];
+      for (let i = 0; i<array.length; i++) {
+        if (array[i] === 'egg') {
+          if (x<2){
+            x++;
+            continue;
+          }else{
+            array1.push(array[i]);
+          }
+        }else {
+          array1.push(array[i]);
+        }
+      }
+      console.log(array1);
+    }
+
+    removeEgg1(['egg','apple','egg','egg','ham']);
+
+    //remove only last 2 'egg's.
+
+    function removeEgg2(array){
+      array.reverse();
+      let x = 0;
+      const array1 = [];
+      for (let i = 0; i<array.length; i++) {
+        if (array[i] === 'egg') {
+          if (x<2){
+            x++;
+            continue;
+          }else{
+            array1.push(array[i]);
+          }
+        }else {
+          array1.push(array[i]);
+        }
+      }
+      console.log(array1.reverse());
+    }
+
+    removeEgg2(['egg','apple','egg','egg','ham']);
+
+    //doing above modifications instead change original value
+
+    const foods = ['egg','apple','egg','egg','ham'];
+
+    function removeEgg3(array){
+      const array2 = array.slice();
+      array2.reverse();
+      let x = 0;
+      const array1 = [];
+      for (let i = 0; i<array2.length; i++) {
+        if (array2[i] === 'egg') {
+          if (x<2){
+            x++;
+            continue;
+          }else{
+            array1.push(array2[i]);
+          }
+        }else {
+          array1.push(array[i]);
+        }
+      }
+      return(array1.reverse());
+    }
+
+    console.log(removeEgg3(foods));
+    console.log(foods);
+
+  </script>
+</body>
+</html>
