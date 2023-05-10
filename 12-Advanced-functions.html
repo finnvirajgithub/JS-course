@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced functions</title>
+</head>
+<body>
+  <script>
+
+    //Normal function
+    function greeting() {
+      console.log('helloworld');
+    }
+    greeting();
+
+
+    //function assign to the variable (anonymous function)
+
+    const function1 = function(){
+      console.log('helloworld');
+    };
+    
+    console.log(function1);
+    function1();
+
+    //function in a object (method)
+
+    const object1 = {
+      name: 'Adam',
+      fun: function(){
+        console.log('helloworld');
+      }
+    }
+
+    object1.fun();
+
+    //passing parameters function to function (callback function)
+
+    function run(name){
+      name();
+    }
+
+    run(function(){
+      console.log('Sri lanka');
+    });
+
+  </script>
+</body>
+</html>
