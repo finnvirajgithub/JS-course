@@ -11,7 +11,26 @@ renderTodo();
 function renderTodo(){
   let todoListHTML ='';
 
-  for (let i = 0; i < todoList.length; i++) {
+  //using forEach instead for loop
+  todoList.forEach(function(todoObj, index) {
+    const { name } = todoObj;
+    const { dueDate } = todoObj;
+
+    //delete button
+
+    const html = `
+    <div>${name}</div>
+    <div>${dueDate}</div>
+    <button onclick = "
+      todoList.splice(${index},1);
+      renderTodo(); 
+      localStorage.removeItem('todoList');     
+    " class ="btn-dlt">Delete</button>
+    </div>`; //generating html using js
+    todoListHTML+=html;
+  })
+
+  /*for (let i = 0; i < todoList.length; i++) {
     const todoObj = todoList[i];
     //const name = todoObj.name;
     //const dueDate = todoObj.dueDate;
@@ -33,7 +52,7 @@ function renderTodo(){
     " class ="btn-dlt">Delete</button>
     </div>`; //generating html using js
     todoListHTML+=html;
-  }
+  }*/
   
   document.querySelector('.js-output').innerHTML = todoListHTML;
 }
