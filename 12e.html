@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="
+    displayAdd();
+    
+  " class="js-btn">Add to cart</button>
+
+  <p class="js-display"></p>
+
+  <script>
+    let timeOut;
+
+    function displayAdd(){
+      const msgElement = document.querySelector('.js-display');
+      
+      msgElement.innerHTML = 'added!';
+
+      clearTimeout(timeOut);
+
+      timeOut = setTimeout(function(){
+        msgElement.innerHTML = '';
+      } , 2000)
+    }
+  </script>
+</body>
+</html>
