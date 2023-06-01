@@ -74,6 +74,47 @@
       console.log(index);
       console.log(value);
     });
+
+    //Arrow Function
+
+    const arrowFunction = () => {
+      console.log('hello');
+    };
+    arrowFunction();
+
+    //short cuts for arrow functions
+      //if one parameter brackets are optional
+
+    const oneparam = param => {
+      console.log(param);
+    }
+    oneparam(5);
+
+      //if one statement curly brackets are optional.
+
+    const oneLine = () => 2+3;
+    console.log(oneLine());
+
+    //recommend to use arrow functions for passing a function into another function.
+
+    [
+      'Good morning',
+      'Good afternoon',
+      'Good night'
+    ].forEach((value,index) => {
+      console.log(index);
+      console.log(value);
+    });
+
+    //short cut for method in a object
+    const obj2 = {
+      method: () => {
+
+      },
+      method(){
+        //easier to read than arrow functions
+      }
+    }
   </script>
 </body>
 </html>
