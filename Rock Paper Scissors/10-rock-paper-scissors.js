@@ -25,6 +25,45 @@ function autoPlay() {
     isAutoPlaying = false;
   }
   }
+
+// event listners for buttons
+
+document.querySelector('.js-rock-btn').addEventListener('click', () => {
+  playGame('Rock');
+});
+
+document.querySelector('.js-paper-btn').addEventListener('click', () => {
+  playGame('Paper');
+});
+
+document.querySelector('.js-scissors-btn').addEventListener('click', () => {
+  playGame('Scissors');
+});
+
+document.querySelector('.js-reset-btn').addEventListener('click', () => {
+  score.wins=0;
+    score.losses=0;
+    score.ties=0;
+    localStorage.removeItem('score');
+    updateScoreElement();
+})
+
+document.querySelector('.js-auto-play').addEventListener('click', () => {
+  autoPlay();
+})
+
+
+//add keydown for play game
+
+document.body.addEventListener('keydown', (event) => {
+  if (event.key === 'r') {
+    playGame('Rock');
+  } else if (event.key === 'p') {
+    playGame('Paper');
+  } else if (event.key === 's') {
+    playGame('Scissors');
+  }
+});
   
 
 function playGame(playerMove){

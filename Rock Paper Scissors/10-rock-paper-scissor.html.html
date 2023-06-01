@@ -14,17 +14,11 @@
 
   <!-- buttons -->
 
-  <button onclick="
-    playGame('Rock');
-  " class="move-btn"><img src="/Rock Paper Scissors/images/rock-emoji.png" alt="" class="move-icon"></button>
+  <button class="move-btn js-rock-btn"><img src="/Rock Paper Scissors/images/rock-emoji.png" alt="" class="move-icon"></button>
 
-  <button onclick="
-    playGame('Paper');
-  " class="move-btn"><img src="/Rock Paper Scissors/images/paper-emoji.png" alt="" class="move-icon"></button>
+  <button class="move-btn js-paper-btn"><img src="/Rock Paper Scissors/images/paper-emoji.png" alt="" class="move-icon"></button>
 
-  <button onclick="
-    playGame('Scissors');
-  " class="move-btn"><img src="/Rock Paper Scissors/images/scissors-emoji.png" alt="" class="move-icon"></button>
+  <button class="move-btn js-scissors-btn"><img src="/Rock Paper Scissors/images/scissors-emoji.png" alt="" class="move-icon"></button>
 
   <p class="js-result result"></p>
 
@@ -34,17 +28,9 @@
 
   <!-- Reset button -->
 
-  <button onclick="
-    score.wins=0;
-    score.losses=0;
-    score.ties=0;
-    localStorage.removeItem('score');
-    updateScoreElement();
-  " class="reset-btn">Reset score</button>
+  <button class="reset-btn js-reset-btn">Reset score</button>
 
-  <button onclick="
-    autoPlay();
-  " class="js-auto-play auto-play">Auto play</button>
+  <button class="js-auto-play auto-play">Auto play</button>
   
 
   <script src="/Rock Paper Scissors/10-rock-paper-scissors.js"></script>

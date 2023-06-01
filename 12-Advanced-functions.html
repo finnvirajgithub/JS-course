@@ -7,7 +7,25 @@
   <title>Advanced functions</title>
 </head>
 <body>
+
+  <button class="js-btn">Click</button>
+
   <script>
+    //use .addEventListner() insted onclick=""
+    // 1. can add multiple event listners
+    // 2. can remove an event listners
+    
+    const btnElement = document.querySelector('.js-btn');
+
+    const eventListener = () => {
+      console.log("Clicked line one"); // arrow function
+    }
+
+    btnElement.addEventListener('click',eventListener);
+
+    btnElement.removeEventListener('click',eventListener);  //remove an event listener
+
+    btnElement.addEventListener('click',() => {console.log('clicked by 2')});     //multiple event listeners
 
     //Normal function
     function greeting() {
