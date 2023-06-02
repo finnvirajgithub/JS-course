@@ -133,6 +133,29 @@
         //easier to read than arrow functions
       }
     }
+
+    // .filter() method
+    // if return true put the values in to array
+
+    console.log([1,-5,3].filter((value, index) => {
+      /*if (value >= 0) {
+        return true;
+      }else{
+        return false;
+      }*/
+
+      return value >= 0;  //short cut
+    }));
+
+    // .map method
+    // create a new array
+    // whatever we return added to new array
+
+    console.log([1,2,3].map((value, index) => {
+      return value + 10;
+    }));
+
+    console.log([1,2,3].map(value => value + 10));  //short cut
   </script>
 </body>
 </html>
