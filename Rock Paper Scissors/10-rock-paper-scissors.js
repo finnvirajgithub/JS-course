@@ -20,9 +20,11 @@ function autoPlay() {
       playGame(playerMove);
     }, 1000);
     isAutoPlaying = true;
+    document.querySelector('.js-auto-play').innerHTML = 'Stop Playing';
   }else{
     clearInterval(intervalId);
     isAutoPlaying = false;
+    document.querySelector('.js-auto-play').innerHTML = 'Auto Play';
   }
   }
 
@@ -62,7 +64,10 @@ document.body.addEventListener('keydown', (event) => {
     playGame('Paper');
   } else if (event.key === 's') {
     playGame('Scissors');
-  }
+  } else if (event.key === 'a') {
+    autoPlay();
+  } 
+  
 });
   
 

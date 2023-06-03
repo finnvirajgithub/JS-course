@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //multiply 2 numbers
+
+    /*const multiply = (a,b) => {
+      return a*b;
+    };
+
+    console.log(multiply(10,10));*/
+
+    // short cut
+
+    const multiply = (a,b) => a*b;
+
+    console.log(multiply(10,10));
+
+    //count positive numbers
+
+    const positiveNumbers = nums => {
+      let count = 0;
+
+      nums.forEach(num => {
+        if (num>0) {
+          count++;
+        }
+      });
+
+      console.log(count);
+    };
+
+    positiveNumbers([1,2,3])
+
+    //add a number to a new array
+
+    const addNum = (array,num) => {
+      return array.map((value) =>value + num
+      );
+    };
+
+    console.log(addNum([1,2,3],2))
+
+    //remove eggs from food
+
+    const removeEgg = (foods) => {
+      return foods.filter((value,index) => {
+        if (value=='egg'){
+          return false;
+        }else{
+          return true;
+        }
+      });
+    }
+
+    console.log(removeEgg(['egg','apple','egg','egg','ham']));
+
+    //remove first 2 eggs from food
+    
+    const removeEgg2 = (foods) => {
+      let count = 0;
+      return foods.filter((value) => {
+        if (value==='egg' && count<2){
+          count++;
+          return false;
+          
+        }else{
+          return true;
+        }
+      });
+    };
+
+    console.log(removeEgg2(['egg','apple','egg','egg','ham']));
+
+
+  </script>
+</body>
+</html>
